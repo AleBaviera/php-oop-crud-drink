@@ -28,20 +28,16 @@ $sumPrice = 0;
 
 for ($i=0; $i < sizeOf($drinks); $i++) {
     $drink = $drinks[$i];
+    $sumPrice += $drink -> getPrice();
 
     if ($drink -> getPrice() < $minPrice -> getPrice()) {
-      $sumPrice += $drink -> getPrice();
       echo 'min price : ' . $drink;
     };
 
 
     if ($drink -> getPrice() > $maxPrice -> getPrice()) {
-      $sumPrice += $drink -> getPrice();
       echo 'max price : ' . $drink;
     }
-
-
-
 
 
 }
