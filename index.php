@@ -17,7 +17,7 @@ if ($res && $res -> num_rows > 0) {
 
 for ($i=0; $i < sizeOf($drinks); $i++) {
     $drink = $drinks[$i];
-    echo $drink -> __toString();
+    echo $drink;
 }
 
 ?>
