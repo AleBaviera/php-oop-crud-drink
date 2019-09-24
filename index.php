@@ -20,4 +20,31 @@ for ($i=0; $i < sizeOf($drinks); $i++) {
     echo $drink;
 }
 
+echo '<br>------------------------<br><br>';
+
+$minPrice = $drinks[0];
+$maxPrice = $drinks[0];
+$sumPrice = 0;
+
+for ($i=0; $i < sizeOf($drinks); $i++) {
+    $drink = $drinks[$i];
+
+    if ($drink -> getPrice() < $minPrice -> getPrice()) {
+      $sumPrice += $drink -> getPrice();
+      echo 'min price : ' . $drink;
+    };
+
+
+    if ($drink -> getPrice() > $maxPrice -> getPrice()) {
+      $sumPrice += $drink -> getPrice();
+      echo 'max price : ' . $drink;
+    }
+
+
+
+
+
+}
+
+echo 'Sum prices: ' . $sumPrice;
 ?>
