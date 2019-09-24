@@ -15,9 +15,13 @@ if ($res && $res -> num_rows > 0) {
 }
 
 
-for ($i=0; $i < sizeOf($drinks); $i++) {
-    $drink = $drinks[$i];
-    echo $drink;
+// for ($i=0; $i < sizeOf($drinks); $i++) {
+//     $drink = $drinks[$i];
+//     echo $drink;
+// }
+
+foreach ($drinks as $drink) {
+  echo $drink;
 }
 
 echo '<br>------------------------<br><br>';
@@ -26,8 +30,8 @@ $minPrice = $drinks[0];
 $maxPrice = $drinks[0];
 $sumPrice = 0;
 
-for ($i=0; $i < sizeOf($drinks); $i++) {
-    $drink = $drinks[$i];
+foreach ($drinks as $drink) {
+    
     $sumPrice += $drink -> getPrice();
 
     if ($drink -> getPrice() < $minPrice -> getPrice()) {
